@@ -1,3 +1,5 @@
+@import '../../helpers/mixins';
+
 :host {
     position: fixed;
     top: 0;
@@ -5,17 +7,27 @@
     width: 100%;
     padding: 0;
     margin: 0;
+    z-index: 1;
 }
 
 nav {
+    background-color: #0062b3;
     font-family: Arial, Helvetica, sans-serif;
-    height: 64px;
-    display: flex;
-    align-items: stretch;
-    background-color: #005EAB;
     margin: 0;
-    padding: 0 64px 0 64px;
+    padding: 0 4vw;
+    height: 60px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
+    box-shadow: 0 1vh 8px #000;
+
+    @include for-size(tablet-landscape-up) {
+        padding: 0 0 0 4vw;
+    }
+
+    @include for-size(desktop-up) {
+        height: 10vh;
+    }
 }
 
 nav a {
@@ -31,80 +43,89 @@ div.logo {
 }
 
 div.logo img {
-    height: 48px;
+    height: 40px;
     margin-right: 8px;
+
+    @include for-size(desktop-up) {
+        height: 8vh;
+    }
 }
 
 div.logo h1 {
-    font-size: 20px;
-    text-shadow: 0 0 4px #000;
+    font-size: 24px;
+    text-shadow: 0 0 0.5rem #000;
+
+    @include for-size(desktop-up) {
+        font-size: 4vh;
+    }
 }
 
 h1.special {
-    color: #C72732;
+    color: #C02630;
     transform: scale(1, -1);
 }
 
 ul.topnav {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    display: none;
+    visibility: hidden;
+
+    @include for-size(tablet-landscape-up) {
+        display: flex;
+        visibility: visible;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        height: 100%;
+    }
 }
-  
+    
 ul.topnav li a {
     display: block;
-    color: white;
-    font-size: 16px;
+    color: #FFF;
+    line-height: 36px;
+    font-weight: 600;
     text-align: center;
     text-decoration: none;
-    padding-inline: 24px;
+    text-shadow: 0 0 8px #002a4d;
+    min-width: 12vw;
+    padding: 12px 0;
+
+    @include for-size(desktop-up) {
+        line-height: 2vh;
+        padding: 4vh 0;
+    }
 }
-  
+
 ul.topnav li a.active {
-    background-color: #000;
-    color: #C72732;
+    background-color: #004680;
 }
 
 nav button {
-    display: none;
-    visibility: hidden;
-}
+    display: block;
+    visibility: visible;
+    background-color: #0062b3;
+    font-size: 1.5em;
+    color: #FFF;
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #222;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
 
-@media screen and (max-width: 600px) {
-    nav {
-        height: 48px;
-        padding: 0 16px;
-    }
-
-    nav a div.logo img {
-        height: 36px;
-    }
-
-    div.logo h1 {
-        font-size: 16px;
-    }
-
-    nav button {
-        display: block;
-        visibility: visible;
-        font-size: 24px;
-        color: #FFF;
-        background-color: #005EAB;
-        border: none;
-        border-radius: 4px;
-        box-shadow: 0 0 4px #222;
-        height: 32px;
-        width: 36px;
-    }
-    
-    nav button:hover {
-        cursor: pointer;
-    }
-
-    ul.topnav {
+    @include for-size(tablet-landscape-up) {
         display: none;
         visibility: hidden;
     }
-  }
+}
+    
+nav button:hover {
+    background-color: #0070cc;
+}
+    
+nav button:active {
+    transform: translateY(2px);
+}

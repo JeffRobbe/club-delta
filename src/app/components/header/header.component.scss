@@ -24,14 +24,6 @@ nav {
     @include for-size(tablet-landscape-up) {
         padding: 0 0 0 4vw;
     }
-
-    @include for-size(desktop-up) {
-        height: 10vh;
-    }
-
-    @include for-size(big-desktop-up) {
-        height: 8vh;
-    }
 }
 
 div.jumbotron {
@@ -55,12 +47,8 @@ div.logo img {
     height: 40px;
     margin-right: 8px;
 
-    @include for-size(desktop-up) {
+    @include for-size(tablet-landscape-up) {
         height: 7vh;
-    }
-
-    @include for-size(big-desktop-up) {
-        height: 5vh;
     }
 }
 
@@ -68,12 +56,8 @@ div.logo h1 {
     font-size: 24px;
     text-shadow: 0 0 0.5rem #777;
 
-    @include for-size(desktop-up) {
+    @include for-size(tablet-landscape-up) {
         font-size: 4vh;
-    }
-
-    @include for-size(big-desktop-up) {
-        font-size: 3vh;
     }
 }
 
@@ -117,7 +101,7 @@ ul.topnav li a {
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    min-width: 12vw;
+    min-width: 16vw;
     padding: 12px 0;
     border-top: 1px solid #000;
 
@@ -126,12 +110,11 @@ ul.topnav li a {
     }
 
     @include for-size(desktop-up) {
-        line-height: 2vh;
-        padding: 4vh 0;
+        min-width: 14vw;
     }
 
     @include for-size(big-desktop-up) {
-        padding: 3vh 0;
+        min-width: 12vw;
     }
 }
 

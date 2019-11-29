@@ -9,7 +9,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 export class HeaderComponent implements OnInit {
   faBars = faBars;
   hiddenTopnav = true;
-  activeLink = "club";
+  activeLink = "presentation";
 
   constructor() { }
 

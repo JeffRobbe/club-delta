@@ -46,19 +46,11 @@ div.logo {
 div.logo img {
     height: 40px;
     margin-right: 8px;
-
-    @include for-size(tablet-landscape-up) {
-        height: 7vh;
-    }
 }
 
 div.logo h1 {
-    font-size: 24px;
+    font-size: 1.5em;
     text-shadow: 0 0 0.5rem #777;
-
-    @include for-size(tablet-landscape-up) {
-        font-size: 4vh;
-    }
 }
 
 h1.special {
@@ -114,8 +106,12 @@ ul.topnav li a {
     }
 
     @include for-size(big-desktop-up) {
-        min-width: 12vw;
+        min-width: 10vw;
     }
+}
+
+ul.topnav li a:hover {
+    background-color: #CCC;
 }
 
 ul.topnav li a.active {
@@ -126,6 +122,10 @@ ul.topnav li a.active {
 ul.topnav li a.special {
     background-color: #000;
     color: #EEE;
+}
+
+ul.topnav li a.special:hover {
+    background-color: #00802b;
 }
 
 nav button {

@@ -149,10 +149,16 @@ nav button {
 }
     
 nav button:hover {
-    color: #EEE;
-    background-color: #777;
+    @include for-size(tablet-landscape-up) {
+        color: #EEE;
+        background-color: #777;
+    }
 }
     
 nav button:active {
     transform: translateY(2px);
+}
+
+nav button:focus {
+    outline: none;
 }

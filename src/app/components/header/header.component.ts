@@ -8,10 +8,22 @@ import { faBars } from '@fortawesome/free-solid-svg-icons'
 })
 export class HeaderComponent implements OnInit {
   faBars = faBars;
+  hiddenTopnav = true;
+  activeLink = "club";
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  triggerTopnav() {
+    this.hiddenTopnav = !this.hiddenTopnav;
+    console.log(this.hiddenTopnav);
+  }
+
+  navigateTo(target: string, link: string) {
+    this.activeLink = link;
+    this.triggerTopnav();
   }
 
 }

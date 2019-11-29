@@ -1,3 +1,4 @@
+<div class="jumbotron"></div>
 <nav>
     <a href="#home">
         <div class="logo">
@@ -5,12 +6,12 @@
             <h1>CLUB DELT</h1><h1 class="special">V</h1>
         </div>
     </a>
-    <div style="flex-grow: 1"></div>
-    <ul class="topnav">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#news">NEWS</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#about" class="active">ABOUT</a></li>
+    <div style="flex-grow: 6"></div>
+    <ul class="topnav" [class.hidden]="hiddenTopnav">
+        <li><a (click)="navigateTo('target','presentation')" [class.active]="activeLink==='presentation'">PRÉSENTATION</a></li>
+        <li><a (click)="navigateTo('target','activites')" [class.active]="activeLink==='activites'">ACTIVITÉS</a></li>
+        <li><a (click)="navigateTo('target','valeurs')" [class.active]="activeLink==='valeurs'">VALEURS</a></li>
+        <li><a (click)="navigateTo('target','inscription')" class="special">INSCRIPTION</a></li>
     </ul>
-    <button><fa-icon [icon]="faBars"></fa-icon></button>
+    <button (click)="triggerTopnav()"><fa-icon [icon]="faBars"></fa-icon></button>
 </nav>

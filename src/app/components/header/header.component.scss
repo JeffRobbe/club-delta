@@ -28,6 +28,10 @@ nav {
     @include for-size(desktop-up) {
         height: 10vh;
     }
+
+    @include for-size(desktop-up) {
+        height: 8vh;
+    }
 }
 
 div.jumbotron {
@@ -54,6 +58,10 @@ div.logo img {
     @include for-size(desktop-up) {
         height: 7vh;
     }
+
+    @include for-size(big-desktop-up) {
+        height: 5vh;
+    }
 }
 
 div.logo h1 {
@@ -62,6 +70,10 @@ div.logo h1 {
 
     @include for-size(desktop-up) {
         font-size: 4vh;
+    }
+
+    @include for-size(big-desktop-up) {
+        font-size: 3vh;
     }
 }
 
@@ -116,6 +128,10 @@ ul.topnav li a {
     @include for-size(desktop-up) {
         line-height: 2vh;
         padding: 4vh 0;
+    }
+
+    @include for-size(big-desktop-up) {
+        padding: 3vh 0;
     }
 }
 

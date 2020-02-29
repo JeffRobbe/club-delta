@@ -10,7 +10,7 @@
     <ul class="topnav" [class.hidden]="hiddenTopnav">
         <li><a (click)="navigateTo('target','presentation')" [class.active]="activeLink==='presentation'">PRÉSENTATION</a></li>
         <li><a (click)="navigateTo('target','activites')" [class.active]="activeLink==='activites'">ACTIVITÉS</a></li>
-        <li><a (click)="navigateTo('target','valeurs')" [class.active]="activeLink==='valeurs'">VALEURS</a></li>
+        <li><a (click)="navigateTo('target','valeurs')" [class.active]="activeLink==='valeurs'">FORMATION</a></li>
         <li><a (click)="navigateTo('target','inscription')" class="special">INSCRIPTION</a></li>
     </ul>
     <button (click)="triggerTopnav()"><fa-icon [icon]="faBars"></fa-icon></button>
